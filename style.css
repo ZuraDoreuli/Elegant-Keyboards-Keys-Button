@@ -1,0 +1,63 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  height: 100vh;
+  display: grid;
+  place-items: center;
+  font-family: 'Times New Roman', Times, serif;
+  background-color: #353535;
+}
+.wrapper {
+  background-color: #232323;
+  padding: 10px 20px;
+  border-radius: 20px;
+  box-shadow: inset -4px 0 4px #00000026, inset 0 -4px 4px #00000040,
+  0 0 0 1px #000000bf, 5px 10px 15px #00000066;
+  cursor: pointer;
+  transition: all 0.4s;
+}
+.wrapper:hover {
+  box-shadow: inset -8px 0 8px #00000026, inset 0 -8px 8px #00000040,
+  0 0 0 2px #000000bf, 10px 20px 25px #00000066;
+}
+.wrapper span {
+  position: relative;
+  display: inline-block;
+  width: 80px;
+  height: 80px;
+  padding: 12px 20px;
+  margin: 5px;
+  border-radius: 10px;
+  box-shadow: inset -8px 0 8px #00000026, inset 0 -8px 8px #00000040,
+  0 0 0 2px #000000bf, 10px 20px 25px #00000066;
+  overflow: hidden;
+}
+.wrapper span::before {
+  content: '';
+  position: absolute;
+  top: 3px;
+  left: 4px;
+  bottom: 14px;
+  right: 12px;
+  background: linear-gradient(90deg, #232323, #303030);
+  border-radius: 10px;
+  box-shadow: -10px -10px 10px #ffffff40, 10px 5px 10px #00000026;
+  border-left: 1px solid #0004;
+  border-bottom: 1px solid #0004;
+  border-top: 1px solid #0009;
+  transition: all 0.4s;
+}
+.wrapper span i {
+  position: relative;
+  color: #fff;
+  font-style: normal;
+  font-size: 28px;
+}
+.wrapper:hover span::before {
+  background: linear-gradient(90deg, #232323, #2c2c2c);
+}
